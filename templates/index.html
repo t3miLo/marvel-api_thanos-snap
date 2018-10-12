@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='main.css')}}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Thanos Snap</title>
 </head>
 <body>
-    <h1>Thanos Snap</h1>
+   <header>
+    <img src="http://i.annihil.us/u/prod/marvel/i/mg/6/40/5274137e3e2cd/standard_medium.jpg" alt="Thanos">
+   </header>
+   <main class='characters'>
+        {% for key, value in charsInfo.items() %}
+            <div>
+                <img src="{{ value }}" alt="{{ key }}">
+                <p>{{ key }}</p>
+            </div>
+         {% endfor %}
+   </main>
 </body>
 </html>
