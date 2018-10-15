@@ -9,15 +9,19 @@
 </head>
 <body>
    <header>
-    <img src="http://i.annihil.us/u/prod/marvel/i/mg/6/40/5274137e3e2cd/standard_medium.jpg" alt="Thanos">
+    <img id='thanos' src="http://i.annihil.us/u/prod/marvel/i/mg/6/40/5274137e3e2cd/standard_medium.jpg" alt="Thanos">
+    <h3 id='theBalance'>Balance in the universe has been established!!!</h3>
    </header>
    <main class='characters'>
         {% for key, value in charsInfo.items() %}
-            <div>
+            <div class='character alive'>
                 <img src="{{ value }}" alt="{{ key }}">
                 <p>{{ key }}</p>
             </div>
          {% endfor %}
    </main>
+   <img  id='snap' src ="{{ url_for('static', filename='snap.jpg') }}" alt="snap">
+
+    <script type='text/javascript' src='{{ url_for("static",  filename="app.js") }}'></script>
 </body>
 </html>
