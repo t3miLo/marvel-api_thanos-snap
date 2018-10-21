@@ -9,7 +9,7 @@ import re
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
-app.config['SECRET_KEY'] = 'Jeremiah1010'
+app.config['SECRET_KEY'] = 'djdkajgd839'
 
 
 def getCharacterData():
@@ -23,7 +23,7 @@ def getCharacterData():
     else:
         ts = str(int(time.time()))
         public_key = '54d7b69dcd93a381909d5c7f8494d03c'
-        private_key = 'cfd54158ee1fe84ddefc5e4982ee7815853d4511'
+        private_key = 'Private Key would go here'
         keyHash = (ts + private_key + public_key).encode('utf-8')
         hassh = hashlib.md5(keyHash).hexdigest()
 
